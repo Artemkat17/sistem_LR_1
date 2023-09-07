@@ -1,10 +1,11 @@
 # -*- coding: windows-1251 -*
 import csv
 
-print("Введите x, y:")
-x = int(input())
-y = int(input())
-path = 'data/Garpix_data_1 - 1.csv'
+print("Введите x, y:", end=' ')
+st = input()
+x = int(st[0])
+y = int(st[2])
+path = 'data/example.csv'
 # функция для перевода из csv в массив
 def csv_to_array(filename):
     array_of_arrays = []
@@ -13,8 +14,8 @@ def csv_to_array(filename):
     with open(filename, 'r') as file:
         csv_reader = csv.reader(file)
 
-        # Пропускаем заголовок
-        next(csv_reader)
+        # # Пропускаем заголовок
+        # next(csv_reader)
 
         for row in csv_reader:
             array = []
