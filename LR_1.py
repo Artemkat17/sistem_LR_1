@@ -1,8 +1,10 @@
+# -*- coding: windows-1251 -*
 import csv
 
+print("¬ведите x, y:")
 x = int(input())
 y = int(input())
-path = ''
+path = 'data/Garpix_data_1 - 1.csv'
 # функци€ дл€ перевода из csv в массив
 def csv_to_array(filename):
     array_of_arrays = []
@@ -25,4 +27,4 @@ def csv_to_array(filename):
 
 mas = csv_to_array(path)
 
-print(mas[x + 1][y + 1])
+print(mas[x - 1][y - 1])
