@@ -3,8 +3,9 @@ import csv
 
 print("¬ведите x, y:", end=' ')
 st = input()
+st = st.split()
 x = int(st[0])
-y = int(st[2])
+y = int(st[1])
 path = 'data/example.csv'
 # функци€ дл€ перевода из csv в массив
 def csv_to_array(filename):
