@@ -7,8 +7,8 @@ st = input()
 st = st.split()
 x = int(st[0])
 y = int(st[1])
-path = 'data/example.csv'
-path_2 = 'data/example.json'
+path = '../data/example.csv'
+path_2 = '../data/example.json'
 
 # функция для перевода из csv в массив
 def csv_to_array(filename):
