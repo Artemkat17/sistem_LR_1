@@ -30,6 +30,7 @@ def csv_to_array(filename):
 
     return array_of_arrays
 
+
 def json_to_array(filename):
     array_of_arrays = []
 
@@ -37,6 +38,7 @@ def json_to_array(filename):
         array_of_arrays = file.read()
 
     return array_of_arrays
+
 
 print("Из csv файла:")
 mas = csv_to_array(path)
