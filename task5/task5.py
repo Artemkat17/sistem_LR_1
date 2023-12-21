@@ -1,6 +1,5 @@
 # -*- coding: windows-1251 -*
 import json
-import numpy as np
 
 
 def json_to_array(filename):
