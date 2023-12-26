@@ -10,6 +10,7 @@ y = int(st[1])
 path = 'data/example.csv'
 path_2 = 'data/example.json'
 
+
 # функция для перевода из csv в массив
 def csv_to_array(filename):
     array_of_arrays = []
@@ -32,12 +33,13 @@ def csv_to_array(filename):
 
 
 def json_to_array(filename):
-    array_of_arrays = []
 
     with open(filename, 'r') as file:
-        array_of_arrays = file.read()
+        data = json.load(file)
 
-    return array_of_arrays
+    arr = [data['str'][i] for i in data['str']]
+
+    return arr
 
 
 print("Из csv файла:")
@@ -45,5 +47,5 @@ mas = csv_to_array(path)
 print(mas[x - 1][y - 1])
 
 print("Из json файла:")
-mas = json_to_array(path)
+mas = json_to_array(path_2)
 print(mas[x - 1][y - 1])
