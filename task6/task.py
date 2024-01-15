@@ -41,11 +41,7 @@ def calculate_similarity_ratio(matrix, num_experts, counter):
     return format(D / D_max, ".2f")
 
 
-def task():
-    ranking_a = [1, [2, 3], 4, [5, 6, 7], 8, 9, 10]
-    ranking_b = [[1, 2], [3, 4, 5], 6, 7, 9, [8, 10]]
-    ranking_c = [3, [1, 4], 2, 6, [5, 7, 8], [9, 10]]
-
+def task(ranking_a, ranking_b, ranking_c):
     num_experts = len([ranking_a, ranking_b, ranking_c])
     rank = create_rank_template(ranking_a, ranking_b, ranking_c)
     matrix = generate_rank_matrix(rank, ranking_a, ranking_b, ranking_c)
@@ -55,4 +51,8 @@ def task():
 
 
 if __name__ == "__main__":
-    task()
+    ranking_a = [1, [2, 3], 4, [5, 6, 7], 8, 9, 10]
+    ranking_b = [[1, 2], [3, 4, 5], 6, 7, 9, [8, 10]]
+    ranking_c = [3, [1, 4], 2, 6, [5, 7, 8], [9, 10]]
+
+    task(ranking_a=ranking_a, ranking_b=ranking_b, ranking_c=ranking_c)
